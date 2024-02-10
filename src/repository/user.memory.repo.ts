@@ -2,10 +2,7 @@ import { User } from "../entities/user";
 import { Repository } from "./repo";
 
 const USERS: User[] = [
-    {
-        id: 1,
-        name: "Pepe",
-    },
+    { id: 1, name: "Pepe" },
     { id: 2, name: "Juan" },
     { id: 3, name: "Elena" },
 ];

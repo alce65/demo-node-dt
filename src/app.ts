@@ -4,7 +4,7 @@ import morgan from "morgan";
 import { HttpError } from "./http.error.js";
 import { UserRouter } from "./router/user.router.js";
 import { UserController } from "./controllers/users.controller.js";
-import { UserMemoryRepository } from "./repository/user.memory.repo.js";
+// import { UserMemoryRepository } from "./repository/user.memory.repo.js";
 import { UserFileRepository } from "./repository/user.file.repo.js";
 
 export const app = express();
@@ -16,10 +16,9 @@ app.use(express.json());
 app.use((req: Request, res: Response, next: NextFunction) => {
     console.log("Saludo desde el middleware");
     const auth = req.get("Authorization");
-    if (!auth) {
-        //next(new HttpError(404, "Autorización requerida"));
-        next();
-    }
+    // if (!auth) {
+    //  next(new HttpError(404, "Autorización requerida"));
+    // }
     next();
 });
 

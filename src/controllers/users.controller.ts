@@ -10,7 +10,6 @@ export class UserController {
 
     async getAll(req: Request, res: Response) {
         const users = await this.repo.findAll();
-        console.log("Users Controller", users);
         res.json(users);
     }
 
